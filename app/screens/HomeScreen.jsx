@@ -1,4 +1,5 @@
 import { Feather, Ionicons } from '@expo/vector-icons';
+import { useRouter } from 'expo-router';
 import {
   Image,
   ImageBackground,
@@ -34,6 +35,7 @@ export default function HomeScreen() {
   ];
 
   const categories = ['Temples', 'Mountains', 'Museums', 'Rivers', 'Beaches'];
+    const router = useRouter();
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }}>
@@ -80,7 +82,19 @@ export default function HomeScreen() {
               duration={600}
               style={styles.destinationCard}
             >
-              <TouchableOpacity style={{ flex: 1 }}>
+              <TouchableOpacity style={{ flex: 1 }}
+              onPress={() => {
+                  if (place.title === "Taj Mahal") {
+                    router.push("/Heritage/Tajmahal");
+                  } else if (place.title === "Qutub Minar") {
+                    router.push("/Heritage/qutubminar");
+                  } else if (place.title === "Red Fort") {
+                    router.push("/Heritage/redfort");
+                  } else if (place.title === "India Gate") {
+                    router.push("/Heritage/indiagate");
+                  }
+                }}
+              >
                 <ImageBackground
                   source={{ uri: place.image }}
                   resizeMode="cover"
