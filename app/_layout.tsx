@@ -9,31 +9,24 @@ export default function Layout() {
         name="index" 
         options={{ title: "Home",
           headerShown:false,
-         }}
-      />
+        }}
+        />
       <Stack.Screen 
         name="Heritage/Tajmahal" 
-        options={{ title: "Taj Mahal" }} 
+        options={{ title: "Taj Mahal",
+          headerShown:false,
+        }} 
+        
       />
+      <Stack.Screen name="Heritage/Qutubminar" options={{title:"Qutub Minar",
+      headerShown:false,      
+      }}/>
+      <Stack.Screen name="Heritage/Redfort" options={{title:"Red Fort",
+        headerShown:false
+      }}/>
+      <Stack.Screen name="Heritage/Indiagate" options={{title: "India Gate",
+        headerShown:false
+      }}/>
     </Stack>
-
-
   );
 }
-
-// import { Stack } from "expo-router";
-
-// export default function Layout() {
-//   return (
-//     <Stack>
-//       <Stack.Screen name="index" options={{ title: "Home",headerShown:false,}}/>
-
-//       <Stack.Screen name="Heritage/tajmahal" options={{ title: "Taj Mahal" }} />
-//       <Stack.Screen name="Heritage/qutubminar" options={{title:"Qutub Minar"}}/>
-//       <Stack.Screen name="Heritage/redfort" options={{title:"Red Fort"}}/>
-//       <Stack.Screen name="Heritage/indiagate" options={{title: "India Gate"}}/>
-//     </Stack>
-
-
-//   );
-// }

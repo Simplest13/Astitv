@@ -11,6 +11,7 @@ import {
   View,
 } from 'react-native';
 import * as Animatable from 'react-native-animatable';
+// import Header from '../../components/Header';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 
@@ -49,7 +50,7 @@ export default function HomeScreen() {
           style={styles.logoImage}
           resizeMode="contain"
         />
-         <Text style={styles.logoText}>Astitva</Text>
+         <Text style={styles.logoText}>Astitv</Text>
         </View>
         <View style={styles.headerRight}>
           <Feather name="bell" size={22} color="#333" />
@@ -87,11 +88,11 @@ export default function HomeScreen() {
                   if (place.title === "Taj Mahal") {
                     router.push("/Heritage/Tajmahal");
                   } else if (place.title === "Qutub Minar") {
-                    router.push("/Heritage/qutubminar");
+                    router.push("/Heritage/Qutubminar");
                   } else if (place.title === "Red Fort") {
-                    router.push("/Heritage/redfort");
+                    router.push("/Heritage/Redfort");
                   } else if (place.title === "India Gate") {
-                    router.push("/Heritage/indiagate");
+                    router.push("/Heritage/Indiagate");
                   }
                 }}
               >
